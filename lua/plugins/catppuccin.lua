@@ -1,7 +1,7 @@
 return {
   "catppuccin/nvim",
   name = "catppuccin",
-	flavour = "mocha",
+  flavour = "mocha",
   priority = 1000, 
   config = function() 
     vim.cmd.colorscheme "catppuccin"

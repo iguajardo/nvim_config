@@ -1,10 +1,10 @@
 return {
-    'nvim-telescope/telescope.nvim', dependencies = {
+  'nvim-telescope/telescope.nvim', dependencies = {
     { 
-        "nvim-telescope/telescope-live-grep-args.nvim" ,
-        -- This will not install any breaking changes.
-        -- For major updates, this must be adjusted manually.
-        version = "^1.0.0",
+      "nvim-telescope/telescope-live-grep-args.nvim" ,
+      -- This will not install any breaking changes.
+      -- For major updates, this must be adjusted manually.
+      version = "^1.0.0",
     },
   },
   tag = '^0.1.8',
@@ -14,7 +14,7 @@ return {
 
     -- first setup telescope
     telescope.setup({
-        -- your config
+      -- your config
     })
     vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
