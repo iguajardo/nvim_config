@@ -23,10 +23,15 @@ return {
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags)
 			vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
 			vim.keymap.set("n", "<leader>fs", telescope.extensions.live_grep_args.live_grep_args, { noremap = true })
+      vim.keymap.set("n", "<leader>fr", "<CMD>lua require('telescope').extensions.git_worktree.git_worktree()<CR>", silent)
+      vim.keymap.set("n", "<leader>fR", "<CMD>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>", silent)
 
 			-- then load the extension
 			telescope.load_extension("live_grep_args")
-			-- telescope.load_extension("cmdline")
+
+      -- git_worktree
+      require('git-worktree').setup()
+      telescope.load_extension("git_worktree")
 		end,
 	},
 	{
