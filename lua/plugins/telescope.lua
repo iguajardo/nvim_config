@@ -16,7 +16,6 @@ return {
 
 			-- first setup telescope
 			telescope.setup({
-				-- your config
 			})
 			vim.keymap.set("n", "<leader>ff", builtin.find_files)
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep)
@@ -27,6 +26,7 @@ return {
 
 			-- then load the extension
 			telescope.load_extension("live_grep_args")
+			-- telescope.load_extension("cmdline")
 		end,
 	},
 	{
