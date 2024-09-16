@@ -7,6 +7,10 @@ vim.wo.number = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- custom theme
+-- vim.opt.termguicolors = true
+vim.cmd.colorscheme "gray"
+
 -- Open new terminal at bottom, fixed height
 vim.keymap.set("n", "<leader>t", function()
   vim.cmd.new()

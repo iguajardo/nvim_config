@@ -30,4 +30,3 @@ require("lazy").setup({
     notify = false,
   }
 })
-vim.cmd.colorscheme "vscode"
