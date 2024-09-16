@@ -18,7 +18,7 @@ return {
       telescope.setup({
         defaults = {
           layout_strategy = "horizontal",
-          path_display = { "truncate", "filename_first" },
+          path_display = { "smart", "filename_first" },
         }
 
 			})
