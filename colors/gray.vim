@@ -59,6 +59,7 @@ call s:highlight('FunctionCall', '', s:Color17, '')
 call s:highlight('Purple', '', s:Color2, '')
 call s:highlight('ErrorVirtualText', '', s:Color18, '')
 call s:highlight('BlueItalic', '', s:Color17, 'italic')
+call s:highlight('Interface', '', s:Color4, 'italic')
 
 highlight! link NonText Comment
 highlight! link TSParameterReference TSParameter
@@ -89,6 +90,7 @@ highlight! link @lsp.type.property PaleBold
 highlight! link @lsp.type.parameter String
 highlight! link DiagnosticError ErrorVirtualText
 highlight! link @lsp.typemod.interface.defaultLibrary.typescript BlueItalic
+highlight! link @lsp.type.interface.typescript Interface
 
 highlight! link TSProperty TSField
 highlight! link Folded Comment
