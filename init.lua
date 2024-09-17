@@ -22,5 +22,4 @@ end)
 
 -- scape terminal key
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
-
 require("config.lazy")

@@ -11,7 +11,7 @@ let s:Color8 = '#4ed4b0'
 let s:Color6 = '#ec9cb2'
 let s:Color2 = '#9f73ea'
 let s:Color5 = '#84D0FF'
-let s:Color0 = '#FF5555'
+let s:Color0 = '#ff5555'
 let s:Color7 = '#6b7b80'
 let s:Color14 = '#383b3d'
 let s:Color3 = '#788a8b'
@@ -24,6 +24,7 @@ let s:Color11 = '#35393b'
 let s:Color1 = '#F6E9CB'
 let s:Color15 = '#295043'
 let s:Color16 = '#556c6a'
+let s:Color17 = '#75cbff'
 
 call s:highlight('Error', '', s:Color0, '')
 call s:highlight('String', '', s:Color1, '')
@@ -50,16 +51,19 @@ call s:highlight('TabLine', s:Color11, '', '')
 call s:highlight('TabLineSel', '', s:Color12, '')
 call s:highlight('TabLineFill', s:Color11, '', '')
 call s:highlight('TSPunctDelimiter', '', s:Color10, '')
+call s:highlight('Pale', '', s:Color10, '')
+call s:highlight('FunctionCall', '', s:Color17, '')
+call s:highlight('Purple', '', s:Color2, '')
 
 highlight! link NonText Comment
 highlight! link TSParameterReference TSParameter
 highlight! link TSNumber Number
 highlight! link TSType Type
+highlight! link TSTypeBuiltin Number
 highlight! link TSLabel Type
 highlight! link TSTag MyTag
 highlight! link TSRepeat Repeat
 highlight! link TSFunction Function
-highlight! link TSConstBuiltin TSVariableBuiltin
 highlight! link TSPunctBracket MyTag
 highlight! link TelescopeNormal Normal
 highlight! link TSTagDelimiter Type
@@ -67,6 +71,17 @@ highlight! link Conditional Operator
 highlight! link Macro Function
 highlight! link TSPunctSpecial TSPunctDelimiter
 highlight! link Operator Keyword
+
+highlight! link @constant.builtin Number 
+highlight! link @function.method.call FunctionCall
+highlight! link @function.call FunctionCall
+highlight! link @variable Pale
+highlight! link @variable.member Type 
+highlight! link @variable.builtin Purple
+highlight! link @type.builtin Number
+highlight! link @lsp.type.property.typescript Pale
+highlight! link @lsp.type.parameter.typescript String
+
 highlight! link TSProperty TSField
 highlight! link Folded Comment
 highlight! link TSOperator Operator
