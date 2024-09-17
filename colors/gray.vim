@@ -25,12 +25,14 @@ let s:Color1 = '#faeac8'
 let s:Color15 = '#295043'
 let s:Color16 = '#556c6a'
 let s:Color17 = '#75cbff'
+let s:Color18 = '#fc8888'
 
 call s:highlight('Error', '', s:Color0, '')
 call s:highlight('String', '', s:Color1, '')
 call s:highlight('Keyword', '', s:Color2, '')
 call s:highlight('Operator', '', s:Color3, '')
 call s:highlight('Type', '', s:Color4, '')
+call s:highlight('TypeBold', '', s:Color4, 'Bold')
 call s:highlight('Function', '', s:Color5, '')
 call s:highlight('Number', '', s:Color6, '')
 call s:highlight('Comment', '', s:Color7, 'italic')
@@ -52,8 +54,11 @@ call s:highlight('TabLineSel', '', s:Color12, '')
 call s:highlight('TabLineFill', s:Color11, '', '')
 call s:highlight('TSPunctDelimiter', '', s:Color10, '')
 call s:highlight('Pale', '', s:Color10, '')
+call s:highlight('PaleBold', '', s:Color10, 'Bold')
 call s:highlight('FunctionCall', '', s:Color17, '')
 call s:highlight('Purple', '', s:Color2, '')
+call s:highlight('ErrorVirtualText', '', s:Color18, '')
+call s:highlight('BlueItalic', '', s:Color17, 'italic')
 
 highlight! link NonText Comment
 highlight! link TSParameterReference TSParameter
@@ -72,6 +77,7 @@ highlight! link Macro Function
 highlight! link TSPunctSpecial TSPunctDelimiter
 highlight! link Operator Keyword
 
+"custom
 highlight! link @constant.builtin Number 
 highlight! link @function.method.call FunctionCall
 highlight! link @function.call FunctionCall
@@ -79,8 +85,10 @@ highlight! link @variable Pale
 highlight! link @variable.member Type 
 highlight! link @variable.builtin Purple
 highlight! link @type.builtin Number
-highlight! link @lsp.type.property.typescript Pale
-highlight! link @lsp.type.parameter.typescript String
+highlight! link @lsp.type.property PaleBold
+highlight! link @lsp.type.parameter String
+highlight! link DiagnosticError ErrorVirtualText
+highlight! link @lsp.typemod.interface.defaultLibrary.typescript BlueItalic
 
 highlight! link TSProperty TSField
 highlight! link Folded Comment

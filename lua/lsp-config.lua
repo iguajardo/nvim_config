@@ -5,9 +5,6 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
--- (Optional) Configure lua language server for neovim
--- lsp.nvim_workspace()
-
 -- lsp.setup()
 local lsp_attach = function(client, bufnr)
   local opts = {buffer = bufnr}
