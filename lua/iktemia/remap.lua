@@ -11,3 +11,6 @@ vim.keymap.set("n", "<leader>t", function()
 end)
 
 vim.keymap.set("n", "<leader>pv", '<cmd>:Ex<CR>', { remap = false })
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
