@@ -12,5 +12,22 @@ end)
 
 vim.keymap.set("n", "<leader>pv", '<cmd>:Ex<CR>', { remap = false })
 
+-- move across buffer faster centering the cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- move between matches but center the view
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- replace with yanked content
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- copy to system clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- delete without saving it to buffer. Send it to Blackhole
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+vim.keymap.set("n", "Q", "<nop>")
