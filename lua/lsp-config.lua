@@ -27,7 +27,9 @@ lsp.extend_lspconfig({
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
-require('mason').setup({})
+require('mason').setup({
+
+})
 require('mason-lspconfig').setup({
   handlers = {
     function(server_name)
