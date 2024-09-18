@@ -9,3 +9,5 @@ vim.keymap.set("n", "<leader>t", function()
   vim.wo.winfixheight = true
   vim.cmd.term()
 end)
+
+vim.keymap.set("n", "<leader>pv", '<cmd>:Ex<CR>', { remap = false })

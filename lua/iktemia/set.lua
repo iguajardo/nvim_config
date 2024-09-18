@@ -13,3 +13,8 @@ vim.g.maplocalleader = "\\"
 -- custom theme
 vim.cmd.colorscheme "gray"
 
+vim.opt.swapfile = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
