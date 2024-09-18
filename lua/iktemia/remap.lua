@@ -34,3 +34,8 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- floating diagnostic
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', {})
+
+-- jump without register in jumplist
+vim.api.nvim_set_keymap('n', '}', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v.count1 .. "}")<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '{', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v.count1 .. "{")<CR>', { noremap = true, silent = true })
+
