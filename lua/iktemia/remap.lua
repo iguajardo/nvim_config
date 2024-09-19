@@ -24,18 +24,20 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- copy to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- delete without saving it to buffer. Send it to Blackhole
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
+-- vim.keymap.set("n", "<C-q>", "<cmd>:q<CR>", { remap = false })
 
 -- floating diagnostic
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', {})
 
 -- jump without register in jumplist
-vim.api.nvim_set_keymap('n', '}', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v.count1 .. "}")<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '{', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v.count1 .. "{")<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap('n', '}', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v.count1 .. "}")<CR>',
+  { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '{', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v.count1 .. "{")<CR>',
+  { noremap = true, silent = true })
