@@ -17,5 +17,5 @@ return {
   opts = {
     suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
     -- log_level = 'debug',
-  }
+  },
 }
