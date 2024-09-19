@@ -61,6 +61,17 @@ call s:highlight('ErrorVirtualText', '', s:Color18, '')
 call s:highlight('BlueItalic', '', s:Color17, 'italic')
 call s:highlight('Interface', '', s:Color4, 'italic')
 
+"DiffView Variables
+let s:Diff0 = '#25414d'
+let s:Diff1 = '#5c4242'
+let s:Diff2 = '#25414d'
+let s:Diff3 = '#2b5668'
+
+call s:highlight('DiffAdd', s:Diff0, 'none', '')
+call s:highlight('DiffDelete', s:Diff1, 'none', '')
+call s:highlight('DiffChange', s:Diff2, '', '')
+call s:highlight('DiffText', s:Diff3, 'none', '')
+
 highlight! link NonText Comment
 highlight! link TSParameterReference TSParameter
 highlight! link TSNumber Number
@@ -92,6 +103,7 @@ highlight! link DiagnosticError ErrorVirtualText
 highlight! link @lsp.typemod.interface.defaultLibrary.typescript BlueItalic
 highlight! link @lsp.type.interface.typescript Interface
 
+highlight! link @lsp.type.interface.typescript Interface
 highlight! link TSProperty TSField
 highlight! link Folded Comment
 highlight! link TSOperator Operator

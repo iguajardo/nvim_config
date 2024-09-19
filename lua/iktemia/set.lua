@@ -1,3 +1,4 @@
+local set = vim.opt
 -- ide settings
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
@@ -20,3 +21,4 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
 vim.opt.showtabline = 0
+set.fillchars = set.fillchars + 'diff: '
