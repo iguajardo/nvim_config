@@ -20,7 +20,6 @@ return {
           layout_strategy = "horizontal",
           path_display = { "filename_first", "smart" },
         }
-
 			})
 			vim.keymap.set("n", "<leader>ff", builtin.find_files)
 			-- vim.keymap.set("n", "<leader>fg", builtin.live_grep)

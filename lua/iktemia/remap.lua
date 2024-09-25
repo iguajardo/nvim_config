@@ -44,3 +44,7 @@ vim.api.nvim_set_keymap('n', '{', ':<C-u>lua vim.cmd("keepjumps norm! " .. vim.v
 
 -- neogit
 vim.keymap.set('n', '<leader>gg', '<cmd>:Neogit<CR>')
+
+-- move from quickfix list
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")

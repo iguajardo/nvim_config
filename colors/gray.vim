@@ -26,6 +26,9 @@ let s:Color15 = '#295043'
 let s:Color16 = '#556c6a'
 let s:Color17 = '#75cbff'
 let s:Color18 = '#fc8888'
+let s:Color19 = '#404446'
+let s:Color20 = '#2c2f31'
+let s:Color21 = '#303436'
 
 call s:highlight('Error', '', s:Color0, '')
 call s:highlight('String', '', s:Color1, '')
@@ -38,12 +41,13 @@ call s:highlight('Number', '', s:Color6, '')
 call s:highlight('Comment', '', s:Color7, 'italic')
 call s:highlight('StatusLine', s:Color9, s:Color8, '')
 call s:highlight('WildMenu', s:Color11, s:Color10, '')
-call s:highlight('Pmenu', s:Color11, s:Color10, '')
+call s:highlight('Pmenu', s:Color19, s:Color10, '')
 call s:highlight('PmenuSel', s:Color10, s:Color12, '')
-call s:highlight('PmenuThumb', s:Color11, s:Color10, '')
+call s:highlight('PmenuThumb', s:Color20, s:Color10, '')
 call s:highlight('DiffAdd', s:Color13, '', '')
 call s:highlight('DiffDelete', s:Color14, '', '')
 call s:highlight('Normal', s:Color11, s:Color10, '')
+call s:highlight('NormalFloat', s:Color21, s:Color10, '')
 call s:highlight('Visual', s:Color15, '', '')
 call s:highlight('CursorLine', s:Color15, '', '')
 call s:highlight('ColorColumn', s:Color15, '', '')
