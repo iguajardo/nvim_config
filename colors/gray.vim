@@ -27,8 +27,8 @@ let s:Color16 = '#556c6a'
 let s:Color17 = '#75cbff'
 let s:Color18 = '#fc8888'
 let s:Color19 = '#404446'
-let s:Color20 = '#2c2f31'
-let s:Color21 = '#303436'
+let s:Color20 = '#5c5c5c'
+let s:Color21 = '#2F2F3F'
 
 call s:highlight('Error', '', s:Color0, '')
 call s:highlight('String', '', s:Color1, '')
