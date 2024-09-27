@@ -1,3 +1,5 @@
 return {
-  "ThePrimeagen/git-worktree.nvim",
+  'polarmutex/git-worktree.nvim',
+  version = '^2',
+  dependencies = { "nvim-lua/plenary.nvim" }
 }

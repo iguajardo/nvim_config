@@ -48,3 +48,16 @@ vim.keymap.set('n', '<leader>gg', '<cmd>:Neogit<CR>')
 -- move from quickfix list
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+
+-- quit
+vim.keymap.set({ "n", "v" }, "<C-q>", "<Cmd>confirm q<CR>")
+
+-- save
+vim.keymap.set({ "n", "v" }, "<C-s>", "<Cmd>w<CR>")
+vim.keymap.set("i", "<C-s>", "<Esc><Cmd>w<CR>a")
+
+-- split windows
+vim.keymap.set("n", "<C-w>h", "<Cmd>set nosplitright<CR> <Cmd>vsplit<CR> <Cmd>set splitright<CR>")
+vim.keymap.set("n", "<C-w>j", "<Cmd>set splitbelow<CR> <Cmd>split<CR>")
+vim.keymap.set("n", "<C-w>k", "<Cmd>set nosplitbelow<CR> <Cmd>split<CR> <Cmd>set splitbelow<CR>")
+vim.keymap.set("n", "<C-w>l", "<Cmd>set splitright<CR> <Cmd>vsplit<CR>")
