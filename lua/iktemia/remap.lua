@@ -61,3 +61,6 @@ vim.keymap.set("n", "<C-w>h", "<Cmd>set nosplitright<CR> <Cmd>vsplit<CR> <Cmd>se
 vim.keymap.set("n", "<C-w>j", "<Cmd>set splitbelow<CR> <Cmd>split<CR>")
 vim.keymap.set("n", "<C-w>k", "<Cmd>set nosplitbelow<CR> <Cmd>split<CR> <Cmd>set splitbelow<CR>")
 vim.keymap.set("n", "<C-w>l", "<Cmd>set splitright<CR> <Cmd>vsplit<CR>")
+
+-- search highlight
+vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>")

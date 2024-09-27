@@ -21,7 +21,7 @@ return {
           path_display = { "filename_first", "smart" },
           mappings = {
             n = {
-              ['<c-d>'] = require('telescope.actions').delete_buffer
+              ['<c-d>'] = require('telescope.actions').delete_buffer,
             }, -- n
             i = {
               ["<C-h>"] = "which_key",
@@ -38,6 +38,8 @@ return {
       vim.keymap.set("n", "<leader>ps", telescope.extensions.live_grep_args.live_grep_args, { noremap = true })
       vim.keymap.set("n", "<leader>pr", telescope.extensions.git_worktree.git_worktree, silent)
       vim.keymap.set("n", "<leader>pR", telescope.extensions.git_worktree.create_git_worktree, silent)
+      vim.keymap.set("n", "<leader>pm", builtin.marks, silent)
+      vim.keymap.set("n", "<leader>px", builtin.registers, silent)
 
       -- then load the extension
       telescope.load_extension("live_grep_args")
