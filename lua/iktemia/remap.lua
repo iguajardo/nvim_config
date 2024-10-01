@@ -64,3 +64,6 @@ vim.keymap.set("n", "<C-w>l", "<Cmd>set splitright<CR> <Cmd>vsplit<CR>")
 
 -- search highlight
 vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>")
+
+-- close quickfix list
+vim.keymap.set('n', '<leader>q', '<Cmd>cclose<CR>')
