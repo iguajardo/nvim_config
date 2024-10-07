@@ -3,8 +3,8 @@ return {
   dependencies = {
     "sindrets/diffview.nvim", -- optional - Diff integration
     config = function()
-      vim.keymap.set("n", "<leader>vv", "<cmd>:DiffviewFileHistory %<CR>")
-      -- vim.keymap.set("n", "<leader>vc", "<cmd>:DiffviewClose<CR>")
+      vim.keymap.set("n", "<leader>df", "<cmd>:DiffviewFileHistory %<CR>")
+      vim.keymap.set("n", "<leader>dc", "<cmd>:DiffviewClose<CR>")
     end
   },
   config = true
