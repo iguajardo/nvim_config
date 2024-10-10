@@ -10,7 +10,7 @@ return {
           {
             function()
               local cwd = vim.fn.getcwd()
-              return " " .. vim.fn.fnamemodify(cwd, ":t")
+              return "  " .. vim.fn.fnamemodify(cwd, ":t")
             end
           },
           'branch',
