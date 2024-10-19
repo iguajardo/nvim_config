@@ -3,7 +3,7 @@ return {
   branch = 'v4.x',
   dependencies = {
     -- LSP Support
-    { 'neovim/nvim-lspconfig' },           -- Required
+    { 'neovim/nvim-lspconfig', version = "*" },           -- Required
     { 'williamboman/mason.nvim' },         -- Optional
     { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
