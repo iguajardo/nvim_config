@@ -23,6 +23,13 @@ vim.opt.scrolloff = 8
 vim.opt.showtabline = 0
 set.fillchars = set.fillchars + 'diff: '
 
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldcolumn = '0'
+vim.opt.foldtext = ''
+vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 0
+
 -- cmp colors
 -- gray
 vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg='NONE', strikethrough=true, fg='#808080' })
