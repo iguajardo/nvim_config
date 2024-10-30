@@ -16,7 +16,13 @@ return {
 
       -- first setup telescope
       telescope.setup({
+        pickers = {
+          find_files = {
+            hidden = true,
+          }
+        },
         defaults = {
+          file_ignore_patterns = { ".git/", "node_modules" },
           layout_strategy = "horizontal",
           path_display = { "filename_first", "smart" },
           mappings = {
@@ -27,7 +33,7 @@ return {
               ['<c-d>'] = require('telescope.actions').delete_buffer
             } -- i
           }
-        }
+        },
       })
       vim.keymap.set("n", "<leader>pf", builtin.find_files)
       -- vim.keymap.set("n", "<leader>fg", builtin.live_grep)
