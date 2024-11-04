@@ -46,9 +46,6 @@ return {
           require('lspconfig')[server_name].setup({})
         end,
       },
-      ensure_installed = {
-        'eslint',
-      }
     })
 
     local cmp = require('cmp')
