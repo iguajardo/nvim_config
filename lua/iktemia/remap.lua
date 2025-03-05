@@ -15,7 +15,20 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- copy to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+
+-- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", function()
+  local mode = vim.fn.mode()
+  if mode == "v" or mode == "V" then
+    vim.cmd('silent normal! "zy')  -- Yank to temporary "z" register
+    vim.fn.setreg("+", vim.fn.substitute(vim.fn.getreg("z"), "\n", " ", "g"))  -- Remove newlines and copy to "+"
+  else
+    vim.cmd('silent normal! "zy')  -- Yank in normal mode
+    vim.fn.setreg("+", vim.fn.substitute(vim.fn.getreg("z"), "\n", " ", "g"))  -- Process and copy to "+"
+  end
+end, { silent = true })
+
+-- vim.keymap.set({ "n", "v" }, "<leader>y", "zy:let @+ = substitute(@z, '\n', ' ', 'g')<CR>")
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- delete without saving it to buffer. Send it to Blackhole
