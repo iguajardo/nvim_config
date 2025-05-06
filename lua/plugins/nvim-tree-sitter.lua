@@ -16,6 +16,7 @@ return {
 					"yaml",
 					"go",
           "markdown",
+          "kotlin",
 				},
 			})
 		end,

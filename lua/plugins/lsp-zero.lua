@@ -47,6 +47,7 @@ return {
         end,
       },
     })
+    require('lspconfig').kotlin_language_server.setup{}
 
     local cmp = require('cmp')
 
